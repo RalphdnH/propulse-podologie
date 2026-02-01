@@ -148,10 +148,10 @@ ul {
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary-dark);
     background-image: none;
     color: var(--white);
-    border-color: var(--primary-color);
+    border-color: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(28, 152, 163, 0.4);
 }
@@ -232,14 +232,14 @@ a.btn-nav:hover,
     gap: 35px;
 }
 
-.nav-menu a {
+.nav-menu a:not(.btn-nav) {
     font-weight: 500;
     color: var(--text-dark);
     position: relative;
 }
 
 .nav-menu a:not(.btn-nav):hover,
-.nav-menu a.active {
+.nav-menu a.active:not(.btn-nav) {
     color: var(--primary-color);
 }
 
