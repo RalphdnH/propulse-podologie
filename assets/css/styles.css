@@ -1703,3 +1703,288 @@ ul {
         height: 32px;
     }
 }
+
+/* ===========================
+   Service Cards with Images (Homepage)
+   =========================== */
+.services-grid-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.service-card-image {
+    display: block;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.service-card-image:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card-image .service-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-card-image .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card-image:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-card-image .service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(28, 152, 163, 0.6), rgba(22, 125, 134, 0.6));
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.service-card-image:hover .service-overlay {
+    opacity: 0.5;
+}
+
+.service-card-image .service-content {
+    padding: 25px;
+}
+
+.service-card-image .service-content h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.service-card-image .service-content p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===========================
+   Treatment Cards with Images (Behandelingen)
+   =========================== */
+.treatment-card-image {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.treatment-card-image:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.treatment-card-image .treatment-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.treatment-card-image .treatment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.treatment-card-image:hover .treatment-image img {
+    transform: scale(1.05);
+}
+
+.treatment-card-image .treatment-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(28, 152, 163, 0.6), rgba(22, 125, 134, 0.6));
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.treatment-card-image:hover .treatment-overlay {
+    opacity: 0.4;
+}
+
+.treatment-card-image .treatment-content {
+    padding: 25px;
+}
+
+.treatment-card-image .treatment-content h3 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.treatment-card-image .treatment-content p {
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.treatment-card-image .treatment-content ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.treatment-card-image .treatment-content ul li {
+    list-style: disc;
+    color: var(--text-gray);
+    margin-bottom: 6px;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   Tarieven Page - Static Price Tables
+   =========================== */
+.content-box.static,
+.content-box.no-hover {
+    transform: none !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.content-box.static:hover,
+.content-box.no-hover:hover {
+    transform: none !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.content-box.static::before,
+.content-box.no-hover::before {
+    display: none !important;
+}
+
+/* Price tables should not be hoverable */
+.content-box:has(.price-table) {
+    transform: none !important;
+}
+
+.content-box:has(.price-table):hover {
+    transform: none !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.content-box:has(.price-table)::before {
+    display: none !important;
+}
+
+/* ===========================
+   Contact Page - Static Form
+   =========================== */
+.content-box:has(form) {
+    transform: none !important;
+}
+
+.content-box:has(form):hover {
+    transform: none !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.content-box:has(form)::before {
+    display: none !important;
+}
+
+/* Social Media Box - reduced spacing */
+.contact-info-box h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info-box > p {
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   Contact Page - Location with Map
+   =========================== */
+.location-grid-horizontal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.location-map-side {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 350px;
+}
+
+.location-map-side iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    border: none;
+}
+
+.location-info-side h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.location-info-side h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.location-info-side ul {
+    padding-left: 20px;
+}
+
+.location-info-side ul li {
+    list-style: disc;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* ===========================
+   Responsive - New Components
+   =========================== */
+@media (max-width: 968px) {
+    .services-grid-images {
+        grid-template-columns: 1fr;
+    }
+
+    .location-grid-horizontal {
+        grid-template-columns: 1fr;
+    }
+
+    .location-map-side {
+        min-height: 300px;
+        order: -1;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-card-image .service-image {
+        height: 160px;
+    }
+
+    .treatment-card-image .treatment-image {
+        height: 150px;
+    }
+}
