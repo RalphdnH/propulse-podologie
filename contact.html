@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Neem contact op met MovePoint Podologie in Mortsel. Telefonisch, per email of via het contactformulier.">
+    <title>Contact | MovePoint Podologie</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="MovePoint Podologie Logo">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="over-mezelf.html">Over Mezelf</a></li>
+                    <li><a href="voor-wie.html">Voor wie</a></li>
+                    <li><a href="behandelingen.html">Behandelingen</a></li>
+                    <li><a href="tarieven.html">Tarieven</a></li>
+                    <li><a href="contact.html" class="btn-nav active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact</h1>
+            <p>Neem gerust contact op voor vragen of om een afspraak te maken</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div>
+                    <div class="content-box">
+                        <h2 class="mb-20">Stuur een bericht</h2>
+                        <p class="mb-40">Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.</p>
+                        
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Naam *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mailadres *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefoonnummer</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Onderwerp</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Selecteer een onderwerp</option>
+                                    <option value="afspraak">Afspraak maken</option>
+                                    <option value="vraag">Algemene vraag</option>
+                                    <option value="tarieven">Vraag over tarieven/verzekeringen</option>
+                                    <option value="behandeling">Vraag over behandeling</option>
+                                    <option value="anders">Anders</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Bericht *</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Verstuur bericht</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <div class="contact-info-box">
+                        <h3>Contactgegevens</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefoon</h4>
+                                <p><a href="tel:+32491220617">0491 22 06 17</a></p>
+                                <p><small>Bij voorkeur telefonisch bereikbaar op vrijdag</small></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>E-mail</h4>
+                                <p><a href="/cdn-cgi/l/email-protection#6900070f062904061f0c190600071d4419060d0605060e000c470b0c"><span class="__cf_email__" data-cfemail="80e9eee6efc0edeff6e5f0efe9eef4adf0efe4efecefe7e9e5aee2e5">[email&#160;protected]</span></a></p>
+                                <p><small>We streven ernaar om binnen 24 uur te reageren</small></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Adres</h4>
+                                <p><strong>Elevate Physio</strong><br>
+                                Krijgsbaan 96<br>
+                                2640 Mortsel</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Openingsuren</h4>
+                                <p>Vrijdag: 09:00 - 18:00<br>
+                                <small>Andere dagen gesloten</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-box" style="margin-top: 30px;">
+                        <h3>Social Media</h3>
+                        <p>Volg ons op social media voor nieuws en tips over voetgezondheid:</p>
+                        <div class="social-links" style="margin-top: 20px;">
+                            <a href="#" aria-label="Facebook" style="background-color: var(--primary-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/elevatephysio_mortsel/" target="_blank" aria-label="Instagram" style="background-color: var(--primary-color);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="content-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="content-box">
+                <h2 class="mb-20">Locatie</h2>
+                <p class="mb-40">MovePoint Podologie is gevestigd in Elevate Physio te Mortsel. De praktijk is goed bereikbaar met de auto en het openbaar vervoer.</p>
+                
+                <div class="map-container">
+                    <!-- Google Maps Embed -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.397!2d4.4469!3d51.1673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6e8b8b8b8b8%3A0x0!2sKrijgsbaan%2096%2C%202640%20Mortsel!5e0!3m2!1snl!2sbe!4v1234567890"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <h4>Bereikbaarheid</h4>
+                    <div class="two-column" style="margin-top: 20px;">
+                        <div>
+                            <p><strong>🚗 Met de auto:</strong></p>
+                            <ul>
+                                <li>Gemakkelijk bereikbaar via de Krijgsbaan</li>
+                                <li>Parkeermogelijkheden in de buurt</li>
+                                <li>Ongeveer 10 minuten van Antwerpen centrum</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p><strong>🚌 Met het openbaar vervoer:</strong></p>
+                            <ul>
+                                <li>Buslijnen in de nabijheid</li>
+                                <li>Op loopafstand van bushaltes</li>
+                                <li>Goed bereikbaar vanuit Antwerpen en omgeving</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="background-color: var(--background);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Veelgestelde vragen</h2>
+            </div>
+
+            <div class="two-column">
+                <div class="content-box">
+                    <h4>Hoe maak ik een afspraak?</h4>
+                    <p>U kunt telefonisch contact opnemen via 0491 22 06 17 of een bericht sturen via het contactformulier. We streven ernaar om snel te reageren en een passende afspraak in te plannen.</p>
+                </div>
+
+                <div class="content-box">
+                    <h4>Heb ik een verwijzing nodig?</h4>
+                    <p>Voor de meeste behandelingen is geen verwijzing nodig. Uitzondering: risicopatiënten met diabetes, reuma of vaataandoeningen hebben een verwijzing van de huisarts nodig.</p>
+                </div>
+
+                <div class="content-box">
+                    <h4>Wordt podologie vergoed door mijn verzekering?</h4>
+                    <p>De meeste aanvullende ziektekostenverzekeringen vergoeden podologie (gedeeltelijk). De hoogte van de vergoeding verschilt per verzekeraar. Informeer bij uw ziekenfonds voor specifieke informatie.</p>
+                </div>
+
+                <div class="content-box">
+                    <h4>Wat moet ik meenemen naar mijn eerste afspraak?</h4>
+                    <p>Neem eventuele medische documenten, een verwijsbrief (indien van toepassing) en uw huidige schoenen mee. Draag gemakkelijke kleding waarin u goed kunt bewegen.</p>
+                </div>
+
+                <div class="content-box">
+                    <h4>Hoe lang duurt een eerste consultatie?</h4>
+                    <p>Een eerste biomechanisch onderzoek met ganganalyse duurt ongeveer 45 minuten. Voor podologische voetverzorging rekenen we ook ongeveer 45 minuten.</p>
+                </div>
+
+                <div class="content-box">
+                    <h4>Kan ik mijn afspraak annuleren?</h4>
+                    <p>Ja, wij vragen u wel om minimaal 24 uur van tevoren te annuleren. Dit kan telefonisch of per e-mail. Bij annuleringen op korte termijn kunnen we helaas genoodzaakt zijn de tijd in rekening te brengen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/images/logo.png" alt="MovePoint Podologie" class="footer-logo">
+                    <p class="footer-tagline">Uw voeten in goede handen</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="https://www.instagram.com/elevatephysio_mortsel/" target="_blank" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Snelle links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="over-mezelf.html">Over Mezelf</a></li>
+                        <li><a href="voor-wie.html">Voor wie</a></li>
+                        <li><a href="behandelingen.html">Behandelingen</a></li>
+                        <li><a href="tarieven.html">Tarieven</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <div>
+                                <strong>Elevate Physio</strong><br>
+                                Krijgsbaan 96, 2640 Mortsel
+                            </div>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            0491 22 06 17
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bad3d4dcd5fad7d5ccdfcad5d3d4ce97cad5ded5d6d5ddd3df94d8df">[email&#160;protected]</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Openingsuren</h4>
+                    <ul class="opening-hours">
+                        <li>
+                            <span>Ma - Do</span>
+                            <span>Gesloten</span>
+                        </li>
+                        <li>
+                            <span>Vrijdag</span>
+                            <span>09:00 - 18:00</span>
+                        </li>
+                        <li>
+                            <span>Za - Zo</span>
+                            <span>Gesloten</span>
+                        </li>
+                    </u
