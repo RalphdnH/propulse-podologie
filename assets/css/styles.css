@@ -109,89 +109,104 @@ ul {
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     border: 2px solid transparent;
     text-align: center;
     text-decoration: none;
+    background-image: none;
 }
 
 /*
- * PRIMARY BUTTON (Default: turquoise achtergrond, witte tekst)
- * Gebruik: Hoofd call-to-action knoppen
- * Voorbeeld: "Maak een afspraak"
+ * PRIMARY BUTTON (Turquoise achtergrond, witte tekst)
+ * Gebruik: "Maak een afspraak", hoofdacties
  */
 .btn-primary {
     background-color: var(--primary-color);
+    background-image: none;
     color: var(--white);
     border-color: var(--primary-color);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-dark);
+    background-image: none;
+    color: var(--white);
     border-color: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 15px rgba(28, 152, 163, 0.4);
 }
 
 /*
- * SECONDARY BUTTON (Default: witte achtergrond, turquoise tekst + border)
- * Gebruik: Secundaire acties naast primary buttons
- * Voorbeeld: "Onze behandelingen"
+ * SECONDARY BUTTON (Witte achtergrond, turquoise tekst + border)
+ * Gebruik: "Onze behandelingen", secundaire acties
  */
 .btn-secondary {
     background-color: var(--white);
+    background-image: none;
     color: var(--primary-color);
     border-color: var(--primary-color);
 }
 
 .btn-secondary:hover {
     background-color: var(--primary-color);
+    background-image: none;
     color: var(--white);
     border-color: var(--primary-color);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 15px rgba(28, 152, 163, 0.4);
 }
 
 /*
- * LIGHT BUTTON (Voor donkere/gekleurde achtergronden)
- * Gebruik: CTA secties met turquoise achtergrond
- * Voorbeeld: "Contact opnemen" in CTA sectie
+ * LIGHT BUTTON (Voor turquoise/donkere achtergronden)
+ * Zelfde stijl als secondary, maar met witte border
+ * Gebruik: "Contact opnemen" in CTA sectie
  */
 .btn-light {
     background-color: var(--white);
+    background-image: none;
     color: var(--primary-color);
-    border-color: var(--white);
+    border-color: var(--primary-color);
 }
 
 .btn-light:hover {
-    background-color: transparent;
+    background-color: var(--primary-dark);
+    background-image: none;
     color: var(--white);
-    border-color: var(--white);
+    border-color: var(--primary-dark);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 /*
- * NAVIGATION BUTTON (Voor header navigatie)
- * Gebruik: Contact knop in navigatie
+ * NAVIGATION BUTTON (Contact knop in header)
+ * Exact zelfde stijl als btn-primary
  */
 .btn-nav {
     background-color: var(--primary-color);
-    color: var(--white) !important;
+    background-image: none;
+    color: var(--white);
     padding: 10px 24px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .btn-nav:hover {
     background-color: var(--primary-dark);
+    background-image: none;
+    color: var(--white);
     border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(28, 152, 163, 0.4);
 }
 
 .btn-nav.active,
 .nav-menu a.active.btn-nav {
     background-color: var(--primary-dark);
+    background-image: none;
     border-color: var(--primary-dark);
-    color: var(--white) !important;
+    color: var(--white);
 }
 
 /* ===========================
