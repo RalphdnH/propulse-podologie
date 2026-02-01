@@ -16,7 +16,7 @@
     --transition: all 0.3s ease;
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-    /* Consistent Typography Sizes */
+    /* Consistent Typography Sizes - Desktop */
     --font-size-h1: 3rem;
     --font-size-h2: 2.2rem;
     --font-size-h3: 1.5rem;
@@ -25,6 +25,9 @@
     --font-size-body: 1rem;
     --font-size-small: 0.95rem;
     --font-size-btn: 1rem;
+    --font-size-hero-title: 3.5rem;
+    --font-size-hero-subtitle: 1.4rem;
+    --font-size-page-header: 2.8rem;
 }
 
 * {
@@ -287,14 +290,14 @@ ul {
 }
 
 .hero-title {
-    font-size: 3.2rem;
+    font-size: var(--font-size-hero-title);
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: var(--font-size-hero-subtitle);
     margin-bottom: 40px;
     font-weight: 300;
     opacity: 0.95;
@@ -1508,16 +1511,66 @@ ul {
         display: none;
     }
 
+    /* Tablet Typography - Consistent across all elements */
+    :root {
+        --font-size-h1: 2.5rem;
+        --font-size-h2: 2rem;
+        --font-size-h3: 1.35rem;
+        --font-size-h4: 1.1rem;
+        --font-size-subtitle: 1.05rem;
+        --font-size-body: 1rem;
+        --font-size-small: 0.9rem;
+        --font-size-btn: 1rem;
+        --font-size-hero-title: 2.8rem;
+        --font-size-hero-subtitle: 1.2rem;
+        --font-size-page-header: 2.4rem;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-hero-title);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-hero-subtitle);
+    }
+
     .section-header h2,
     .intro-text h2,
     .why-content h2,
-    .content-box h3,
-    .cta-content h2 {
-        font-size: 2.1rem;
+    .cta-content h2,
+    .content-section h2,
+    .availability-content h2 {
+        font-size: var(--font-size-h2);
     }
 
-    h3 {
-        font-size: 1.4rem;
+    h3,
+    .content-box h3,
+    .service-content h3,
+    .treatment-content h3,
+    .target-group-content h3,
+    .contact-info-box h3,
+    .location-info-side h3 {
+        font-size: var(--font-size-h3);
+    }
+
+    h4,
+    .approach-card h4,
+    .location-info-side h4 {
+        font-size: var(--font-size-h4);
+    }
+
+    .section-header p,
+    .intro-text p,
+    .why-content p,
+    .content-box p,
+    .service-content p,
+    .treatment-content p,
+    .approach-card p {
+        font-size: var(--font-size-body);
+    }
+
+    .btn {
+        font-size: var(--font-size-btn);
     }
 
     .services-grid {
@@ -1535,17 +1588,32 @@ ul {
 }
 
 @media (max-width: 576px) {
+    /* Mobile Typography - Consistent across all elements */
+    :root {
+        --font-size-h1: 2.2rem;
+        --font-size-h2: 1.8rem;
+        --font-size-h3: 1.25rem;
+        --font-size-h4: 1.05rem;
+        --font-size-subtitle: 1rem;
+        --font-size-body: 0.95rem;
+        --font-size-small: 0.85rem;
+        --font-size-btn: 0.95rem;
+        --font-size-hero-title: 2.4rem;
+        --font-size-hero-subtitle: 1.1rem;
+        --font-size-page-header: 2.1rem;
+    }
+
     .hero {
         height: 70vh;
         min-height: 500px;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: var(--font-size-hero-title);
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: var(--font-size-hero-subtitle);
     }
 
     .hero-buttons {
@@ -1559,21 +1627,44 @@ ul {
     .section-header h2,
     .intro-text h2,
     .why-content h2,
-    .content-box h3,
-    .cta-content h2 {
-        font-size: 1.9rem;
+    .cta-content h2,
+    .content-section h2,
+    .availability-content h2 {
+        font-size: var(--font-size-h2);
     }
 
     .page-header h1 {
-        font-size: 2.2rem;
+        font-size: var(--font-size-page-header);
     }
 
-    h3 {
-        font-size: 1.3rem;
+    h3,
+    .content-box h3,
+    .service-content h3,
+    .treatment-content h3,
+    .target-group-content h3,
+    .contact-info-box h3,
+    .location-info-side h3 {
+        font-size: var(--font-size-h3);
     }
 
-    .hero-title {
-        font-size: 2.2rem;
+    h4,
+    .approach-card h4,
+    .location-info-side h4 {
+        font-size: var(--font-size-h4);
+    }
+
+    .section-header p,
+    .intro-text p,
+    .why-content p,
+    .content-box p,
+    .service-content p,
+    .treatment-content p,
+    .approach-card p {
+        font-size: var(--font-size-body);
+    }
+
+    .btn {
+        font-size: var(--font-size-btn);
     }
 
     .footer-grid {
