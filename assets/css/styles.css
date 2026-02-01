@@ -613,56 +613,75 @@ ul {
 }
 
 /* ===========================
-   Wave Section Dividers
+   Section Dividers
    =========================== */
-.wave-divider {
+.section-divider {
     position: absolute;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 2;
 }
 
-.wave-divider-top {
-    top: 0;
+.section-divider-top {
+    top: -1px;
 }
 
-.wave-divider-bottom {
-    bottom: 0;
+.section-divider-bottom {
+    bottom: -1px;
 }
 
-.wave-divider svg {
+.section-divider svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 60px;
+    height: 50px;
 }
 
-.wave-divider-top svg {
-    transform: rotate(180deg);
-}
-
-.wave-divider .shape-fill {
+.section-divider .shape-fill {
     fill: var(--white);
 }
 
-.wave-divider-primary .shape-fill {
+.section-divider-primary .shape-fill {
     fill: var(--primary-color);
 }
 
-.wave-divider-background .shape-fill {
+.section-divider-background .shape-fill {
     fill: var(--background);
 }
 
-.wave-divider-dark .shape-fill {
+.section-divider-dark .shape-fill {
     fill: #1a1a1a;
 }
 
-/* Curved section styling */
-.section-curved {
+/* Angled divider */
+.angled-divider {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 2;
+}
+
+.angled-divider-top {
+    top: -1px;
+}
+
+.angled-divider-bottom {
+    bottom: -1px;
+}
+
+.angled-divider svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Curved sections with padding */
+.section-with-divider {
     position: relative;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 /* ===========================
@@ -996,6 +1015,89 @@ ul {
 }
 
 /* ===========================
+   Target Group Rows (Voor Wie page)
+   =========================== */
+.target-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    margin-bottom: 0;
+}
+
+.target-group-row:nth-child(even) {
+    direction: rtl;
+}
+
+.target-group-row:nth-child(even) > * {
+    direction: ltr;
+}
+
+.target-group-image {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.target-group-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.target-group-content {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.target-group-row:nth-child(even) .target-group-content {
+    background-color: var(--background);
+}
+
+.target-group-content h3 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.target-group-content p {
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.target-group-content ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.target-group-content ul li {
+    list-style: disc;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.target-group-content .highlight {
+    background-color: var(--primary-light);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.target-group-content .highlight p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* ===========================
    About Page - Approach Section
    =========================== */
 .approach-section {
@@ -1081,33 +1183,30 @@ ul {
 
 .location-content .address {
     background-color: var(--primary-light);
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
     margin: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.location-content .address p {
+.location-content .address-logo {
+    flex-shrink: 0;
+}
+
+.location-content .address-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.location-content .address-text p {
     margin-bottom: 5px;
     color: var(--text-dark);
 }
 
-.partner-logo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-    padding-top: 25px;
-    border-top: 1px solid var(--border-color);
-}
-
-.partner-logo img {
-    height: 60px;
-    width: auto;
-}
-
-.partner-logo span {
-    color: var(--text-gray);
-    font-size: 0.95rem;
+.location-content .address-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* ===========================
@@ -1240,6 +1339,20 @@ ul {
 
     .approach-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .target-group-row,
+    .target-group-row:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+    }
+
+    .target-group-image {
+        min-height: 250px;
+    }
+
+    .target-group-content {
+        padding: 40px 30px;
     }
 
     .intro-image::after {
