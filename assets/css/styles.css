@@ -185,8 +185,9 @@ ul {
 }
 
 .logo img {
-    height: 80px;
+    height: 120px;
     width: auto;
+    margin: -15px 0;
 }
 
 .nav-menu {
@@ -1527,4 +1528,178 @@ ul {
 
 .mt-40 {
     margin-top: 40px;
+}
+
+/* ===========================
+   Button Variants
+   =========================== */
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   Address Button in Location Box
+   =========================== */
+.address-button {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.address-button .btn {
+    white-space: nowrap;
+}
+
+/* ===========================
+   Behandelingen Page - Info Box
+   =========================== */
+.info-box-highlight {
+    background: linear-gradient(135deg, var(--primary-light), rgba(28, 152, 163, 0.1));
+    border-left: 5px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.info-box-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.info-box-content h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.info-box-content p {
+    color: var(--text-gray);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* ===========================
+   Behandelingen Page - Treatments Section
+   =========================== */
+.treatments-section {
+    padding: 100px 0;
+    background-color: var(--background);
+    position: relative;
+}
+
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.treatment-card {
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.treatment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.treatment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.treatment-card:hover::before {
+    transform: scaleX(1);
+}
+
+.treatment-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.treatment-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.treatment-card p {
+    color: var(--text-gray);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.treatment-card ul {
+    padding-left: 20px;
+}
+
+.treatment-card ul li {
+    list-style: disc;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Shape fill for background color divider */
+.shape-fill-background {
+    fill: var(--background) !important;
+}
+
+/* ===========================
+   Responsive - Behandelingen
+   =========================== */
+@media (max-width: 968px) {
+    .info-box-highlight {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .treatments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-box-highlight {
+        padding: 25px;
+    }
+
+    .info-box-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .info-box-icon svg {
+        width: 32px;
+        height: 32px;
+    }
 }
