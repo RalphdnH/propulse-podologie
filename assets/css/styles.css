@@ -158,13 +158,15 @@ ul {
 
 /*
  * NAVIGATION BUTTON (Contact knop in header)
- * Exact zelfde stijl als btn-primary, alleen smaller padding
+ * Exact zelfde stijl als btn-primary
  */
-.btn-nav {
+.btn-nav,
+a.btn-nav,
+.nav-menu .btn-nav {
     display: inline-block;
-    background-color: var(--primary-color);
-    background-image: none;
-    color: var(--white);
+    background-color: var(--primary-color) !important;
+    background-image: none !important;
+    color: #ffffff !important;
     padding: 12px 28px;
     border-radius: 8px;
     border: 2px solid var(--primary-color);
@@ -176,10 +178,12 @@ ul {
     transition: all 0.3s ease;
 }
 
-.btn-nav:hover {
-    background-color: var(--primary-dark);
-    background-image: none;
-    color: var(--white);
+.btn-nav:hover,
+a.btn-nav:hover,
+.nav-menu .btn-nav:hover {
+    background-color: var(--primary-dark) !important;
+    background-image: none !important;
+    color: #ffffff !important;
     border-color: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(28, 152, 163, 0.4);
@@ -187,10 +191,10 @@ ul {
 
 .btn-nav.active,
 .nav-menu a.active.btn-nav {
-    background-color: var(--primary-dark);
-    background-image: none;
+    background-color: var(--primary-dark) !important;
+    background-image: none !important;
     border-color: var(--primary-dark);
-    color: var(--white);
+    color: #ffffff !important;
 }
 
 /* ===========================
@@ -775,21 +779,28 @@ ul {
     opacity: 0.95;
 }
 
-/* CTA section button - witte achtergrond op turquoise, zelfde stijl als secondary */
+/* Buttons op turquoise achtergrond (CTA en Availability secties)
+ * Witte achtergrond, turquoise tekst, witte border
+ * Hover: turquoise achtergrond, witte tekst
+ */
 .cta-content .btn,
-.cta-section .btn {
-    background-color: var(--white);
-    background-image: none;
-    color: var(--primary-color);
-    border-color: var(--white);
+.cta-section .btn,
+.availability-content .btn,
+.availability-section .btn {
+    background-color: var(--white) !important;
+    background-image: none !important;
+    color: var(--primary-color) !important;
+    border-color: var(--white) !important;
 }
 
 .cta-content .btn:hover,
-.cta-section .btn:hover {
-    background-color: transparent;
-    background-image: none;
-    color: var(--white);
-    border-color: var(--white);
+.cta-section .btn:hover,
+.availability-content .btn:hover,
+.availability-section .btn:hover {
+    background-color: var(--primary-dark) !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border-color: var(--primary-dark) !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
