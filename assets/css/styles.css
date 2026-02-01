@@ -240,17 +240,25 @@ ul {
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 10px;
+    margin: -10px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .mobile-menu-toggle span {
+    display: block;
     width: 25px;
     height: 3px;
     background-color: var(--text-dark);
     transition: var(--transition);
+    pointer-events: none;
 }
 
 /* ===========================
@@ -1440,9 +1448,10 @@ ul {
     }
 
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
         z-index: 1001;
         position: relative;
+        pointer-events: auto;
     }
 
     .mobile-menu-toggle.active span:nth-child(1) {
@@ -1455,6 +1464,11 @@ ul {
 
     .mobile-menu-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
     }
 
     /* Ensure overlays work on mobile */
