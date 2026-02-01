@@ -181,11 +181,11 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .logo img {
-    height: 100px;
+    height: 80px;
     width: auto;
 }
 
@@ -252,6 +252,7 @@ ul {
     background-image: url('../images/hero-banner.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     background-blend-mode: overlay;
 }
 
@@ -846,6 +847,30 @@ ul {
     border-radius: 12px;
     box-shadow: var(--shadow);
     margin-bottom: 30px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.content-box:hover::before {
+    transform: scaleX(1);
 }
 
 .content-box h3 {
@@ -1017,16 +1042,33 @@ ul {
 /* ===========================
    Target Group Rows (Voor Wie page)
    =========================== */
+.target-groups-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .target-group-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.8fr 1.2fr;
     gap: 0;
     align-items: stretch;
-    margin-bottom: 0;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+.target-group-row:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .target-group-row:nth-child(even) {
     direction: rtl;
+    background-color: var(--background);
 }
 
 .target-group-row:nth-child(even) > * {
@@ -1035,7 +1077,7 @@ ul {
 
 .target-group-image {
     position: relative;
-    min-height: 400px;
+    min-height: 320px;
     overflow: hidden;
 }
 
@@ -1046,18 +1088,22 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform 0.5s ease;
+}
+
+.target-group-row:hover .target-group-image img {
+    transform: scale(1.05);
 }
 
 .target-group-content {
-    padding: 60px 50px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--white);
 }
 
 .target-group-row:nth-child(even) .target-group-content {
-    background-color: var(--background);
+    background-color: transparent;
 }
 
 .target-group-content h3 {
@@ -1120,11 +1166,28 @@ ul {
     text-align: center;
     transition: var(--transition);
     position: relative;
+    overflow: hidden;
+}
+
+.approach-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .approach-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
+}
+
+.approach-card:hover::before {
+    transform: scaleX(1);
 }
 
 .approach-card .approach-number {
@@ -1348,11 +1411,15 @@ ul {
     }
 
     .target-group-image {
-        min-height: 250px;
+        min-height: 200px;
     }
 
     .target-group-content {
-        padding: 40px 30px;
+        padding: 30px 25px;
+    }
+
+    .target-group-content h3 {
+        font-size: 1.5rem;
     }
 
     .intro-image::after {
@@ -1431,11 +1498,15 @@ ul {
     }
 
     .logo img {
-        height: 70px;
+        height: 60px;
     }
 
-    .wave-divider svg {
-        height: 40px;
+    .section-divider svg {
+        height: 30px;
+    }
+
+    .hero {
+        background-attachment: scroll;
     }
 }
 
