@@ -157,38 +157,22 @@ ul {
 }
 
 /*
- * LIGHT BUTTON (Voor turquoise/donkere achtergronden)
- * Zelfde stijl als secondary, maar met witte border
- * Gebruik: "Contact opnemen" in CTA sectie
- */
-.btn-light {
-    background-color: var(--white);
-    background-image: none;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-light:hover {
-    background-color: var(--primary-dark);
-    background-image: none;
-    color: var(--white);
-    border-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-}
-
-/*
  * NAVIGATION BUTTON (Contact knop in header)
- * Exact zelfde stijl als btn-primary
+ * Exact zelfde stijl als btn-primary, alleen smaller padding
  */
 .btn-nav {
+    display: inline-block;
     background-color: var(--primary-color);
     background-image: none;
     color: var(--white);
-    padding: 10px 24px;
+    padding: 12px 28px;
     border-radius: 8px;
     border: 2px solid var(--primary-color);
+    font-size: var(--font-size-btn);
     font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -789,6 +773,25 @@ ul {
     font-size: var(--font-size-subtitle);
     margin-bottom: 35px;
     opacity: 0.95;
+}
+
+/* CTA section button - witte achtergrond op turquoise, zelfde stijl als secondary */
+.cta-content .btn,
+.cta-section .btn {
+    background-color: var(--white);
+    background-image: none;
+    color: var(--primary-color);
+    border-color: var(--white);
+}
+
+.cta-content .btn:hover,
+.cta-section .btn:hover {
+    background-color: transparent;
+    background-image: none;
+    color: var(--white);
+    border-color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 /* ===========================
