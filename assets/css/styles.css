@@ -152,6 +152,15 @@ ul {
     background-color: var(--primary-dark);
 }
 
+.btn-nav.active {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+.nav-menu a.active.btn-nav {
+    color: var(--white);
+}
+
 /* ===========================
    Navigation
    =========================== */
@@ -176,7 +185,7 @@ ul {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
@@ -252,7 +261,7 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(28, 152, 163, 0.85), rgba(22, 125, 134, 0.85));
+    background: linear-gradient(135deg, rgba(28, 152, 163, 0.6), rgba(22, 125, 134, 0.6));
 }
 
 .hero-content {
@@ -297,11 +306,82 @@ ul {
 }
 
 /* ===========================
+   Section Animations
+   =========================== */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+}
+
+.slide-left.visible {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.slide-right.visible {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.scale-in.visible {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* ===========================
    Intro Section
    =========================== */
 .intro-section {
     padding: 100px 0;
     background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .intro-grid {
@@ -309,6 +389,8 @@ ul {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .intro-text h2 {
@@ -360,26 +442,56 @@ ul {
 .services-overview {
     padding: 100px 0;
     background-color: var(--background);
+    position: relative;
+}
+
+.services-overview::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, var(--white), transparent);
+    pointer-events: none;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
 }
 
 .service-card {
     background-color: var(--white);
-    padding: 40px 30px;
+    padding: 35px 25px;
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: var(--transition);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
 }
 
 .service-icon {
@@ -411,6 +523,20 @@ ul {
 .why-choose {
     padding: 100px 0;
     background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--primary-light) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .why-grid {
@@ -418,6 +544,8 @@ ul {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .why-content h2 {
@@ -465,10 +593,23 @@ ul {
 }
 
 .why-image {
-    background: linear-gradient(135deg, var(--primary-light), var(--background));
     border-radius: 16px;
     height: 500px;
     box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    position: relative;
+}
+
+.why-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.why-image-placeholder {
+    background: linear-gradient(135deg, var(--primary-light), var(--background));
+    width: 100%;
+    height: 100%;
 }
 
 /* ===========================
@@ -513,7 +654,10 @@ ul {
     height: 50px;
     width: auto;
     margin-bottom: 15px;
+    /* Logo needs transparent background for proper inversion */
+    /* Current filter creates white silhouette from logo */
     filter: brightness(0) invert(1);
+    opacity: 0.9;
 }
 
 .footer-tagline {
@@ -861,7 +1005,7 @@ ul {
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .price-row {
@@ -918,6 +1062,10 @@ ul {
     .cta-section,
     .content-section {
         padding: 60px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }
 
