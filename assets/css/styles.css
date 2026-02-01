@@ -2160,13 +2160,9 @@ a.btn-nav:hover,
     display: none !important;
 }
 
-/* Social Media Box - reduced spacing */
+/* Contact Info Box - consistent spacing */
 .contact-info-box h3 {
-    margin-bottom: 10px;
-}
-
-.contact-info-box > p {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 /* ===========================
