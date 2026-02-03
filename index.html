@@ -3,334 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Propulse Podologie - Professionele podologische zorg in Mortsel. Uw voeten in goede handen.">
+    <meta name="description" content="Propulse Podologie - Binnenkort online. Professionele podologische zorg in Mortsel.">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Koen Alenis">
-    <title>Propulse Podologie | Uw voeten in goede handen</title>
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://ralphdnh.github.io/propulse-podologie/">
+    <title>Propulse Podologie | Binnenkort online</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/propulse-podologie-logo.png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ralphdnh.github.io/propulse-podologie/">
-    <meta property="og:title" content="Propulse Podologie | Uw voeten in goede handen">
-    <meta property="og:description" content="Propulse Podologie - Professionele podologische zorg in Mortsel. Uw voeten in goede handen.">
-    <meta property="og:image" content="https://ralphdnh.github.io/propulse-podologie/assets/images/propulse-social-media.jpeg">
+    <meta property="og:url" content="https://propulse-podologie.be/">
+    <meta property="og:title" content="Propulse Podologie | Binnenkort online">
+    <meta property="og:description" content="Propulse Podologie - Binnenkort online. Professionele podologische zorg in Mortsel.">
+    <meta property="og:image" content="https://propulse-podologie.be/assets/images/propulse-social-media.jpeg">
     <meta property="og:locale" content="nl_BE">
     <meta property="og:site_name" content="Propulse Podologie">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://ralphdnh.github.io/propulse-podologie/">
-    <meta name="twitter:title" content="Propulse Podologie | Uw voeten in goede handen">
-    <meta name="twitter:description" content="Propulse Podologie - Professionele podologische zorg in Mortsel. Uw voeten in goede handen.">
-    <meta name="twitter:image" content="https://ralphdnh.github.io/propulse-podologie/assets/images/propulse-social-media.jpeg">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Podiatrist",
-        "name": "Propulse Podologie",
-        "description": "Professionele podologische zorg in Mortsel. Uw voeten in goede handen.",
-        "url": "https://ralphdnh.github.io/propulse-podologie/",
-        "logo": "https://ralphdnh.github.io/propulse-podologie/assets/images/propulse-podologie-logo.png",
-        "image": "https://ralphdnh.github.io/propulse-podologie/assets/images/propulse-social-media.jpeg",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Krijgsbaan 96",
-            "addressLocality": "Mortsel",
-            "postalCode": "2640",
-            "addressCountry": "BE"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "51.1667",
-            "longitude": "4.4667"
-        },
-        "priceRange": "€€",
-        "areaServed": {
-            "@type": "City",
-            "name": "Mortsel"
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Koen Alenis",
-            "jobTitle": "Podoloog"
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Podologische behandelingen",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Biomechanisch onderzoek"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Podologische zolen"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Voetverzorging"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
-
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1c98a3;
+            --primary-dark: #167d86;
+            --white: #ffffff;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--white);
+            line-height: 1.7;
+            overflow: hidden;
+        }
+
+        .coming-soon {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            background-image: url('assets/images/hero-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-blend-mode: overlay;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(28, 152, 163, 0.75), rgba(22, 125, 134, 0.75));
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 700px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .logo {
+            width: 350px;
+            height: auto;
+            margin: 0 auto 25px;
+            filter: brightness(0) invert(1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .address {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 30px;
+        }
+
+        .address svg {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .logo {
+                width: 280px;
+            }
+
+            .status {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .logo {
+                width: 220px;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="index.html" class="logo">
-                    <img src="assets/images/propulse-podologie-logo.png" alt="Propulse Podologie Logo">
-                </a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="over-mezelf.html">Over Mezelf</a></li>
-                    <li><a href="voor-wie.html">Voor wie</a></li>
-                    <li><a href="behandelingen.html">Behandelingen</a></li>
-                    <li><a href="tarieven.html">Tarieven</a></li>
-                    <li><a href="contact.html" class="btn-nav">Contact</a></li>
-                </ul>
+    <div class="coming-soon">
+        <div class="overlay"></div>
+        <div class="content">
+            <img src="assets/images/propulse-podologie-logo.png" alt="Propulse Podologie Logo" class="logo">
+            <h1>Binnenkort online</h1>
+            <p class="tagline">Professionele podologische zorg voor een gezond en actief leven</p>
+            <div class="status">
+                <span class="status-dot"></span>
+                <span>We werken hard aan onze nieuwe website</span>
             </div>
+            <p class="address">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Krijgsbaan 96, 2640 Mortsel
+            </p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Uw voeten in goede handen</h1>
-                <p class="hero-subtitle">Professionele podologische zorg voor een gezond en actief leven</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">Maak een afspraak</a>
-                    <a href="behandelingen.html" class="btn btn-secondary">Onze behandelingen</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Intro Section -->
-    <section class="intro-section">
-        <div class="container">
-            <div class="intro-grid">
-                <div class="intro-text">
-                    <h2>Welkom bij Propulse Podologie</h2>
-                    <p>Bij Propulse Podologie staat uw voetgezondheid centraal. Als erkend podoloog behandel ik zowel huid- en nagelaandoeningen als klachten aan het bewegingsapparaat. Mijn praktijk is gevestigd in Elevate Physio te Mortsel, waar we werken in een moderne en professionele omgeving.</p>
-                    <p>Of u nu last hebt van voetpijn, knie-, heup- of rugklachten die hun oorsprong vinden in de voeten, of u kampt met huid- en nagelaandoeningen - ik sta klaar om u te helpen met een persoonlijke en professionele aanpak.</p>
-                    <a href="over-mezelf.html" class="btn btn-secondary">Leer mij kennen</a>
-                </div>
-                <div class="intro-image">
-                    <img src="assets/images/koen-alenis.jpg" alt="Koen Alenis - Podoloog">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="services-overview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Wat kan ik voor u betekenen?</h2>
-                <p>Een uitgebreid aanbod aan podologische zorg</p>
-            </div>
-            <div class="services-grid-images">
-                <a href="behandelingen.html" class="service-card-image">
-                    <div class="service-image">
-                        <img src="assets/images/biomechanisch-onderzoek.png" alt="Biomechanisch onderzoek">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Biomechanisch onderzoek</h3>
-                        <p>Uitgebreide gang- en loopanalyse om de oorzaak van uw klachten op te sporen</p>
-                    </div>
-                </a>
-                <a href="behandelingen.html" class="service-card-image">
-                    <div class="service-image">
-                        <img src="assets/images/podologische-voetverzorging.jpg" alt="Podologische voetverzorging">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Podologische voetverzorging</h3>
-                        <p>Behandeling van huid- en nagelaandoeningen zoals eksterogen en ingegroeide nagels</p>
-                    </div>
-                </a>
-                <a href="behandelingen.html" class="service-card-image">
-                    <div class="service-image">
-                        <img src="assets/images/voetzolen.jpg" alt="Podologische zolen op maat">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Podologische zolen op maat</h3>
-                        <p>Op maat gemaakte zolen voor optimale ondersteuning en verlichting van klachten</p>
-                    </div>
-                </a>
-                <a href="behandelingen.html" class="service-card-image">
-                    <div class="service-image">
-                        <img src="assets/images/risicopatienten.jpg" alt="Zorg voor risicopatiënten">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Zorg voor risicopatiënten</h3>
-                        <p>Gespecialiseerde voetverzorging voor mensen met diabetes of andere aandoeningen</p>
-                    </div>
-                </a>
-            </div>
-            <div class="section-cta">
-                <a href="behandelingen.html" class="btn btn-secondary">Alle behandelingen</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-choose">
-        <div class="container">
-            <div class="why-grid">
-                <div class="why-content">
-                    <h2>Waarom kiezen voor Propulse?</h2>
-                    <ul class="why-list">
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <div>
-                                <strong>Erkend podoloog</strong>
-                                <p>Gediplomeerd en erkend paramedisch beroep</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <div>
-                                <strong>Persoonlijke aanpak</strong>
-                                <p>Elke behandeling is afgestemd op uw individuele situatie</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <div>
-                                <strong>Moderne faciliteiten</strong>
-                                <p>Gevestigd in Elevate Physio met state-of-the-art apparatuur</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="check-icon">✓</span>
-                            <div>
-                                <strong>Multidisciplinaire samenwerking</strong>
-                                <p>Nauwe samenwerking met kinesisten en andere zorgverleners</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="why-image">
-                    <!-- Voeg hier je foto toe: assets/images/waarom-kiezen.jpg -->
-                    <img src="assets/images/waarom-kiezen.jpg" alt="Propulse Podologie praktijk" onerror="this.style.display='none'; this.parentElement.classList.add('why-image-placeholder');">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Klaar om uw voetklachten aan te pakken?</h2>
-                <p>Maak vandaag nog een afspraak voor een eerste consultatie</p>
-                <a href="contact.html" class="btn btn-secondary">Contact opnemen</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="assets/images/propulse-podologie-logo.png" alt="Propulse Podologie" class="footer-logo">
-                    <p class="footer-tagline">Uw voeten in goede handen</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                        <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Snelle links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="over-mezelf.html">Over Mezelf</a></li>
-                        <li><a href="voor-wie.html">Voor wie</a></li>
-                        <li><a href="behandelingen.html">Behandelingen</a></li>
-                        <li><a href="tarieven.html">Tarieven</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <div>
-                                <strong>Elevate Physio</strong><br>
-                                Krijgsbaan 96, 2640 Mortsel
-                            </div>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            0491 22 06 17
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0c65626a634c61637a697c63656278217c63686360636b6569226e69">[email&#160;protected]</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Openingsuren</h4>
-                    <ul class="opening-hours">
-                        <li>
-                            <span>Ma - Do</span>
-                            <span>Gesloten</span>
-                        </li>
-                        <li>
-                            <span>Vrijdag</span>
-                            <span>09:00 - 18:00</span>
-                        </li>
-                        <li>
-                            <span>Za - Zo</span>
-                            <span>Gesloten</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Propulse Podologie. Alle rechten voorbehouden.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/script.js"></script>
+    </div>
 </body>
 </html>
